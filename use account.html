@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User Account</title>
+	
+    <link rel="stylesheet"type="text/css" href="styles/user account.css"> 
+	
+	<link rel="stylesheet"  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+  </head>
+  <body>
+  
+  <img class = "logo" src="images/jetblue.jpeg" class="Logo" width="100" height="100">
+  
+   
+   <div class="navbar" style="margin-top:0px;">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <div class="dropdown">
+          <button class="dropbtn" color="white">Booking
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Book Meals</a>
+            <a href="#">Book Hotels</a>
+            
+          </div>
+        </div> 
+        <a href="#"><i class="fa fa-gamepad"></i> Packages</a> 
+        <a href="#"><i class="fa fa-trophy"></i> Flights</a>
+        <a href="#"><i class="fa fa-trophy"></i> Travel Information</a>
+        <a href="#"><i class="fa fa-trophy"></i> Contact Us</a>
+        <a href="#"><i class="fa fa-trophy"></i> About Us</a>
+
+
+ </div>
+  
+  
+ 
+  <h1>User Account<h1>
+  <div id = "clock" onload="currentTime()"></div>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="action">
+      <div class="profile" onclick="menuToggle();">
+        <img src="images/avatar.jpg" />
+      </div>
+      <div class="menu">
+        <h3>User name<br /><span>User Position</span></h3>
+        <ul>
+          <li>
+            <img src="images/user.png" /><a href="#">My profile</a>
+          </li>
+          <li>
+            <img src="images/edit.png" /><a href="#">Edit profile</a>
+          </li>
+          <li>
+            <img src="images/envelope.png" /><a href="#">Inbox</a>
+          </li>
+          <li>
+            <img src="images/settings.png" /><a href="#">Setting</a>
+          </li>
+          <li><img src="images/question.png" /><a href="#">Help</a></li>
+          <li>
+            <img src="images/log-out.png" /><a href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+      }
+    </script>
+	
+	<script>
+	
+  function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+    
+  if(hh > 12){
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  let t = setTimeout(function(){ currentTime() }, 1000); 
+
+}
+
+currentTime();
+	
+	</script>
+	
+	
+	<section id="contact">
+            <div class="footer">
+                <div class="main">
+                    <div class="list">
+                      <h4>Quick Links</h4>  
+                      <ul>
+                        <li><a href="#">About us </a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li> 
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Tour</a></li>
+                      </ul>
+
+                    </div>
+
+
+
+                    <div class="list">
+                        <h4>Support</h4>  
+                        <ul>
+                          <li><a href="#">About us </a></li>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Privacy policy</a></li> 
+                          <li><a href="#">Help</a></li>
+                          <li><a href="#">Tour</a></li>
+                        </ul>
+  
+                    </div>
+
+
+
+
+                    <div class="list">
+                        <h4>Contact Information</h4>  
+                            <ul>
+                                <li><a href="#">127/6,C 2nd Street </a></li>
+                                <li><a href="#">Malabe, Colombo</a></li>
+                                <li><a href="#">(+94)190-831-59 </a></li> 
+                                <li><a href="#">info@mydomaun.com</a></li>
+                                <li><a href="#">+(011)446-7890</a></li>
+                            </ul>
+  
+                    </div>
+
+
+                      <div class="list ">
+                        <h4>Connect</h4>
+                        <div class="social"></div>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="#"><i class='bx bxl-meta' ></i></a>
+                      </div>
+
+                </div>
+
+                <div class="end-text"></div>
+                <p>Copyright ©2022 All right reserved </p>
+
+            </div>
+	
+		
+  </body>
+  
+   
+</html>
+
